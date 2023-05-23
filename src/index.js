@@ -5,14 +5,16 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import ClassComponent from './components/ClassComponent';
 import FunctionComponent from './components/FunctionComponent';
+import ProductDetailComponent from './components/ProductDetailComponent';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* <App /> */}
-    <ClassComponent />
+    <ClassComponent title="Demo Using Prop in class component" />
     <br />
-    <FunctionComponent />
+    {/* <FunctionComponent /> */}
+    <ProductDetailComponent title="Iphone 14" content="Description ..... " />
   </React.StrictMode>
 );
 
