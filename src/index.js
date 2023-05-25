@@ -7,6 +7,7 @@ import ClassComponent from './components/ClassComponent';
 import FunctionComponent from './components/FunctionComponent';
 import ProductDetailComponent from './components/ProductDetailComponent';
 import CounterComponent from './components/CounterComponent';
+import CounterFuncComponent from './components/CounterFuncComponent';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -16,7 +17,8 @@ root.render(
     <br /> */}
     {/* <FunctionComponent /> */}
     {/* <ProductDetailComponent title="Iphone 14" content="Description ..... " /> */}
-    <CounterComponent />
+    {/* <CounterComponent /> */}
+    <CounterFuncComponent />
   </React.StrictMode>
 );
 
