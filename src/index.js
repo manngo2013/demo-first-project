@@ -17,8 +17,8 @@ root.render(
     <br /> */}
     {/* <FunctionComponent /> */}
     {/* <ProductDetailComponent title="Iphone 14" content="Description ..... " /> */}
-    {/* <CounterComponent /> */}
-    <CounterFuncComponent />
+    <CounterComponent />
+    {/* <CounterFuncComponent /> */}
   </React.StrictMode>
 );
 
