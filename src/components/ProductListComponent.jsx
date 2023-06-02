@@ -8,7 +8,6 @@ export default class ProductListComponent extends Component {
 
     return (
       <div>
-        <h1>Product Management</h1>
         <table cellPadding={5} cellSpacing={2} border={1}>
           <thead>
             <tr>

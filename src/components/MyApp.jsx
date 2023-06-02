@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../App.css';
 import ProductListComponent from './ProductListComponent';
+import AddProductForm from './AddProductForm';
 
 export default class MyApp extends Component {
   constructor(props) {
@@ -73,6 +74,18 @@ export default class MyApp extends Component {
           </div>
         )} */}
 
+        <h1>Product Management</h1>
+        {this.state.status ? (
+          <div>
+            <button onClick={() => this.handleShowHide()}>Add New Product</button>
+          </div>
+        ) : (
+          <div>
+            <button onClick={() => this.handleShowHide()}>Hide</button>
+            <AddProductForm />
+          </div>
+        )}
+        <br />
         <ProductListComponent products={this.state.products} />
       </div>
     );
