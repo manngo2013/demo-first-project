@@ -28,8 +28,27 @@ export default class AddProductForm extends Component {
     });
   };
 
-  handleAddProduct() {
-    alert(`Add new product: ${this.state.name} - ${this.state.price} - ${this.state.content}`);
+  handleAddProduct(event) {
+    event.preventDefault();
+
+    // Check validate
+    if (!this.state.name || !this.state.price || !this.state.content) {
+      alert('Fields must required');
+      return;
+    }
+
+    this.props.addNewProduct({
+      id: Math.floor(Math.random() * 100),
+      name: this.state.name,
+      price: this.state.price,
+      content: this.state.content,
+    });
+
+    this.setState({
+      name: '',
+      price: '',
+      content: '',
+    });
   }
 
   render() {
@@ -59,7 +78,7 @@ export default class AddProductForm extends Component {
               <tr>
                 <td></td>
                 <td>
-                  <input type="submit" value="Add Product" onClick={() => this.handleAddProduct()} />
+                  <input type="submit" value="Add Product" onClick={(event) => this.handleAddProduct(event)} />
                 </td>
               </tr>
             </tbody>

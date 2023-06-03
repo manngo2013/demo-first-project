@@ -43,6 +43,12 @@ export default class MyApp extends Component {
     });
   }
 
+  addNewProduct = (product) => {
+    this.setState({
+      products: [...this.state.products, product],
+    });
+  };
+
   render() {
     /*let content;
     if (this.state.status === false) {
@@ -82,7 +88,7 @@ export default class MyApp extends Component {
         ) : (
           <div>
             <button onClick={() => this.handleShowHide()}>Hide</button>
-            <AddProductForm />
+            <AddProductForm addNewProduct={this.addNewProduct} />
           </div>
         )}
         <br />
