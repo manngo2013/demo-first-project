@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 
 export default class ProductListComponent extends Component {
+  handleDeleteProduct = (product) => {
+    this.props.removeProduct(product.id);
+  };
+
   render() {
     console.log('>>>>>>>>> Check props: ', this.props);
 
@@ -26,7 +30,11 @@ export default class ProductListComponent extends Component {
                   <td>{product.name}</td>
                   <td>{product.price}</td>
                   <td>{product.content}</td>
-                  <td></td>
+                  <td>
+                    <button type="button" onClick={() => this.handleDeleteProduct(product)}>
+                      Delete
+                    </button>
+                  </td>
                 </tr>
               );
             })}

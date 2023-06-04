@@ -49,6 +49,12 @@ export default class MyApp extends Component {
     });
   };
 
+  removeProduct = (id) => {
+    this.setState({
+      products: this.state.products.filter((product) => product.id !== id),
+    });
+  };
+
   render() {
     /*let content;
     if (this.state.status === false) {
@@ -92,7 +98,7 @@ export default class MyApp extends Component {
           </div>
         )}
         <br />
-        <ProductListComponent products={this.state.products} />
+        <ProductListComponent products={this.state.products} removeProduct={this.removeProduct} />
       </div>
     );
   }
